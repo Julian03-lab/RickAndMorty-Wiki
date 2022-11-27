@@ -14,4 +14,4 @@ const SearchName = ({ handleSearch,search,setActualPage }) => {
   );
 };
 
-export default SearchName;
+export default React.memo(SearchName);

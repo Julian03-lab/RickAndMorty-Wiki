@@ -64,7 +64,7 @@ const NavBar = ({
         </svg>
       </button>
       <aside
-        className={`${dropdownActive} lg:flex lg:flex-col lg:w-1/4 gap-4 md:px-8 lg:max-w-[300px] self-center`}
+        className={`${dropdownActive} lg:flex lg:flex-col lg:w-1/4 gap-4 md:px-8 lg:px-0 lg:max-w-[300px] self-center lg:self-start`}
       >
         <div>
           <h1 className="text-3xl font-bold px-1 py-2 font-signika">Search</h1>
@@ -74,7 +74,7 @@ const NavBar = ({
             setActualPage={setActualPage}
           />
         </div>
-        <div className="md:grid grid-cols-2">
+        <div className="md:grid grid-cols-2 lg:grid-cols-1">
           <div>
             <h1 className="text-3xl font-bold px-1 py-2 font-signika">
               Status
@@ -109,4 +109,4 @@ const NavBar = ({
   );
 };
 
-export default NavBar;
+export default React.memo(NavBar);

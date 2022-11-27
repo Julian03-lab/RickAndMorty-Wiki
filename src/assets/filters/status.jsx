@@ -25,4 +25,4 @@ const Status = ({ handleStatus, selected,setActualPage }) => {
   );
 };
 
-export default Status;
+export default React.memo(Status);

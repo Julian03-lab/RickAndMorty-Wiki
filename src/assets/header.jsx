@@ -15,7 +15,7 @@ const Header = () => {
         alt="rick and morty wiki logo"
         className="lg:w-2/3 self-center"
       />
-      <nav className="flex flex-col gap-3 items-center justify-evenly">
+      <nav className="flex flex-col lg:flex-row gap-3 items-center justify-evenly">
         <a
           href="https://github.com/Julian03-lab/RickAndMorty-Wiki"
           className="text-2xl lg:text-3xl font-bold text-white hover:text-zinc-800"
@@ -45,4 +45,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);

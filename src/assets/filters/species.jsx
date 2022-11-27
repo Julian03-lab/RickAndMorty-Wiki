@@ -37,4 +37,4 @@ const Species = ({ handleSpecies, selected,setActualPage }) => {
   );
 };
 
-export default Species;
+export default React.memo(Species);

@@ -13,4 +13,4 @@ const FilterButton = ({ category, handleClick, selected }) => {
   );
 };
 
-export default FilterButton;
+export default React.memo(FilterButton);
