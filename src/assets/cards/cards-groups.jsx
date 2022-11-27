@@ -3,7 +3,7 @@ import Card from "./card";
 
 const CardsGroup = ({ data }) => {
   return (
-    <div className="grid grid-cols-4 justify-center gap-2">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
       {data.map((item) => (
         <Card
           key={item.id}

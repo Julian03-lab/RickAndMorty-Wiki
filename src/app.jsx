@@ -39,12 +39,12 @@ const App = () => {
   }, [url]);
 
   return (
-    <div className="flex  flex-col items-center pb-6 pt-3 px-20 gap-9 bg-gradient-to-tr from-lime-400 to-sky-500">
+    <div className="flex flex-col items-center pb-6 pt-3 px-3 lg:px-20 gap-6 lg:gap-9 bg-gradient-to-tr from-lime-400 to-sky-500 overflow-hidden">
       <Header />
       <>
       {pages > 0 ? <Pagination pages={pages} setActualPage={setActualPage} actualPage={actualPage}/> : <></>}
-      </>
-      <div className="flex gap-11">
+      </> 
+      <div className="flex flex-col gap-4 lg:gap-11 items-center">
         <NavBar
           species={species}
           status={status}
@@ -55,13 +55,13 @@ const App = () => {
           pages={pages}
           setActualPage={setActualPage}
         />
-        {loading ? (
+         {loading ? (
           <LoadingSpinner loading={loading} />
         ) : error ? (
           <Error />
         ) : (
             <CardsGroup data={data} />
-        )}
+        )} 
       </div>
     </div>
   );

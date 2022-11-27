@@ -10,10 +10,10 @@ const Card = ({ name, status, species, origin, image }) => {
 
   return (
     <div
-      className="font-signika  bg-white flex flex-col max-w-[260px] rounded-2xl shadow-xl border-2 "
+      className="font-signika  bg-white flex flex-col lg:max-w-[260px] rounded-2xl shadow-xl border-2"
     >
-      <div className="relative">
-        <img src={image} alt={name} className="rounded-t-2xl shadow-md" />
+      <div className="relative ">
+        <img src={image} alt={name} className="rounded-t-2xl shadow-md " />
         <div
           className={
             status === "Alive" ? alive : status === "Dead" ? dead : unknown
@@ -22,15 +22,15 @@ const Card = ({ name, status, species, origin, image }) => {
           {status}
         </div>
       </div>
-      <div className="p-3 flex flex-col gap-4">
-        <div className="text-3xl font-semibold text-center py-2">{name}</div>
+      <div className="p-3 flex flex-col gap-2 lg:gap-4">
+        <div className="text-2xl md:text-3xl font-semibold text-center md:py-2">{name}</div>
         <div>
-          <div className="text-xl text-zinc-800">Specie:</div>
-          <div className="text-2xl font-medium">{species}</div>
+          <div className="text-base md:text-xl text-zinc-800">Specie:</div>
+          <div className="text-lg md:text-2xl font-medium">{species}</div>
         </div>
         <div>
-          <div className="text-xl text-zinc-800">Origin:</div>
-          <div className="text-2xl font-medium">{origin}</div>
+          <div className="text-base md:text-xl text-zinc-800">Origin:</div>
+          <div className="text-lg md:text-2xl font-medium">{origin}</div>
         </div>
       </div>
     </div>

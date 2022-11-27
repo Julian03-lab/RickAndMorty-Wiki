@@ -6,31 +6,40 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  const iconStyle = "text-3xl lg:text-4xl text-white hover:text-gray-300";
+
   return (
     <div className="flex flex-col gap-7">
-      <img src={logo} alt="rick and morty wiki logo" className="w-2/3 self-center"/>
-      <nav className="flex items-center justify-evenly">
-      <a href="https://www.freepik.com/vectors/background" className="text-3xl font-semibold text-white hover:text-zinc-800">
+      <img
+        src={logo}
+        alt="rick and morty wiki logo"
+        className="lg:w-2/3 self-center"
+      />
+      <nav className="flex flex-col gap-3 items-center justify-evenly">
+        <a
+          href="https://github.com/Julian03-lab/RickAndMorty-Wiki"
+          className="text-2xl lg:text-3xl font-bold text-white hover:text-zinc-800"
+          target="_blank"
+        >
           GitHub Repository
         </a>
         <ul className="flex gap-5">
-          <li className="text-4xl text-white hover:text-zinc-800">
-            <a href="">
+          <li className={iconStyle}>
+            <a href="https://github.com/Julian03-lab" target="_blank">
               <FontAwesomeIcon icon={faGithub} />
-            </a>
+            </a> 
           </li>
-          <li className="text-4xl text-white hover:text-zinc-800">
-            <a href="">
+          <li className={iconStyle}>
+            <a href="https://www.linkedin.com/in/julian-fontana-391a90206/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </li>
-          <li className="text-4xl text-white hover:text-zinc-800">
-            <a href="">
+          <li className={iconStyle}>
+            <a href="https://julian-fontana.me" target="_blank">
               <FontAwesomeIcon icon={faGlobe} />
             </a>
           </li>
         </ul>
-        
       </nav>
     </div>
   );
